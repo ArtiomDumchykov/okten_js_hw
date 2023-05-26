@@ -58,6 +58,8 @@
 
 
 
+
+
 class Client {
     constructor(id, name, surname, email, phone, orders = []) {
         this.id = id;
@@ -112,7 +114,7 @@ function returnObj(i) {
 }
 
 function randomOneToTen() {
-    return  Math.floor(Math.randomOneToTen() * (10 - 1 + 1)) + 1
+    return  Math.floor(Math.random() * (10 - 1 + 1)) + 1
 }
 
 
