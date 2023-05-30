@@ -15,10 +15,7 @@ const body = document.body
 const div = document.createElement("div")
 div.textContent = "Hello World"
 
-div.classList.add("wrap");
-div.classList.add("collapse");
-div.classList.add("alpha");
-div.classList.add("beta");
+div.classList.add("wrap", "collapse", "alpha", "beta");
 
 div.style.backgroundColor = "red";
 div.style.color = "violet";
