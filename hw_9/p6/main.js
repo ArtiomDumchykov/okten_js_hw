@@ -90,17 +90,21 @@ function render(arr) {
 
         let liElementsHTML = ""
         for (const itemModule of modules) {
-            liElementsHTML += `<li>${itemModule}</li>`
+            liElementsHTML += `<li class="modules-list__item">${itemModule}</li>`
         }
 
         const ul = `<ul class="modules__list">${liElementsHTML}</ul>`
 
         html += `
-            <div>
-                <h1>${title}</h1>
-                <p>Month duration: ${monthDuration}</p>
-                <p>Hour duration: ${hourDuration}</p>
-                ${ul}
+            <div class="wrap">
+                <h1 class="title">${title}</h1>
+                <div class="time__text">
+                    <p class="month__text">Month duration: ${monthDuration}</p>
+                    <p class="hour__text">Hour duration: ${hourDuration}</p>
+                </div>
+                <div class="wrap-list">
+                    ${ul}
+                </div>
                 
             </div>
         `
