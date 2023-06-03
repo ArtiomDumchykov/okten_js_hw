@@ -714,6 +714,8 @@ const utils = {
         disabled: "disabled"
     }
 }
+
+
 const wrapper = document.querySelector(".wrapper")
 const prevBtn = document.querySelector('#prev');
 const nextBtn = document.querySelector('#next');
@@ -725,8 +727,13 @@ if (!utils.totalCount) {
     wrapper.textContent = "array ia empty";
     utils.currentArr = [];
 } else {
-    const {totalCount,limit, page, next} = utils
+    const {totalCount,limit, page, next, actions} = utils
     utils.pages = Math.ceil(totalCount / limit)
+
+    if (totalCount <= limit) {
+        setAttr(nextBtn, actions.disabled, actions.disabled)
+    }
+    
     utils.currentArr = getArrSlice(locations, page - 1, limit)
     
     render(utils.currentArr)
