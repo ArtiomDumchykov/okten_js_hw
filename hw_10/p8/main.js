@@ -735,7 +735,6 @@ if (!utils.totalCount) {
     }
     
     utils.currentArr = getArrSlice(locations, page - 1, limit)
-    
     render(utils.currentArr)
 }
 
@@ -746,9 +745,12 @@ function backHandler() {
 
 function nextHandler() {
     const {totalCount, limit, page, next, pages, actions} = utils
-    console.log(next, next, pages)
+    console.log(page, next, pages)
 
-    if (utils.next - 1 == utils.pages) {
+
+
+
+    if (!!(utils.next == utils.pages)) {
         setAttr(nextBtn, actions.disabled, actions.disabled)
         return 
     } else {
