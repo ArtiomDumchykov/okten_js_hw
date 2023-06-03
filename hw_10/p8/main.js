@@ -697,3 +697,103 @@ let locations = [
         "type": "city"
     }
 ];
+
+locations.map((item, index) => item.id = index)
+
+// locations = []
+
+const utils = {
+    page: 1,
+    next: 2,
+    pages: null,
+    limit: 10,
+
+    totalCount: typeof locations != "undefined" ? locations.length : 0,
+    currentArr: null,
+    actions: {
+        disabled: "disabled"
+    }
+}
+const wrapper = document.querySelector(".wrapper")
+const prevBtn = document.querySelector('#prev');
+const nextBtn = document.querySelector('#next');
+
+
+
+
+if (!utils.totalCount) {
+    wrapper.textContent = "array ia empty";
+    utils.currentArr = [];
+} else {
+    const {totalCount,limit, page, next} = utils
+    utils.pages = Math.ceil(totalCount / limit)
+    utils.currentArr = getArrSlice(locations, page - 1, limit)
+    
+    render(utils.currentArr)
+}
+
+function backHandler() {
+
+}
+
+
+function nextHandler() {
+    const {totalCount, limit, page, next, pages, actions} = utils
+    console.log(next, next, pages)
+
+    if (utils.next - 1 == utils.pages) {
+        setAttr(nextBtn, actions.disabled, actions.disabled)
+        return 
+    } else {
+        removeAttr(prevBtn, actions.disabled)
+
+        utils.page++;
+        utils.next++;
+    
+    
+        const from = (utils.page - 1) * limit;
+        const to = (utils.next -1) * limit;
+    
+        utils.currentArr = getArrSlice(locations,  from, to)
+    
+        render(utils.currentArr)    
+    }
+
+
+}
+
+
+function render(arr) {
+    const html = [...arr].map(item => createElement(item)).join(" ")
+    wrapper.innerHTML = html;
+}
+
+
+function createElement({title, type, ...rest}) {
+    return `
+    <div class="item-wrap">
+            <h2 class="title-text">${title}</h2>
+            <p class="type-text">${type}</p>
+        </div>
+    `
+}
+
+function getArrSlice(arr, from, to) {
+    return [...arr].slice(from, to)
+}
+
+
+
+
+
+function removeAttr(element, nameAttr) {
+    element.removeAttribute(nameAttr)
+}
+
+function setAttr(element, nameAtrr, valAttr){
+    element.setAttribute(nameAtrr, valAttr)
+}
+
+
+prevBtn.addEventListener("click", backHandler)
+nextBtn.addEventListener("click", nextHandler)
