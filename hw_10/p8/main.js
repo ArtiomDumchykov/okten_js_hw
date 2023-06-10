@@ -727,7 +727,7 @@ if (!utils.totalCount) {
     wrapper.textContent = "array ia empty";
     utils.currentArr = [];
 } else {
-    const {totalCount,limit, page, next, actions} = utils
+    const {totalCount,limit, page, actions} = utils
     utils.pages = Math.ceil(totalCount / limit)
 
     if (totalCount <= limit) {
@@ -744,16 +744,16 @@ function backHandler() {
 
 
 function nextHandler() {
+    console.log(utils)
     const {totalCount, limit, page, next, pages, actions} = utils
     console.log(page, next, pages)
 
 
-
-
-    if (!!(utils.next == utils.pages)) {
+    if (isCheck()) {
         setAttr(nextBtn, actions.disabled, actions.disabled)
         return 
-    } else {
+    } 
+
         removeAttr(prevBtn, actions.disabled)
 
         utils.page++;
@@ -766,9 +766,13 @@ function nextHandler() {
         utils.currentArr = getArrSlice(locations,  from, to)
     
         render(utils.currentArr)    
-    }
+    
 
 
+}
+
+function isCheck() {
+    return utils.next >= utils.pages
 }
 
 
