@@ -1,7 +1,7 @@
 
 
 class RequestServer {
-    static url = "http://jsonplaceholder.typicode.com";
+    static url = "https://jsonplaceholder.typicode.com";
 
     constructor() {
         if (typeof RequestServer.instance === "object") {
