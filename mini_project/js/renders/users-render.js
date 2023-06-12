@@ -4,8 +4,8 @@ import { getElement, insertContentToElement } from "../_utils/index.js"
 const ul = getElement(".users-list")
 
 const utils_url = {
-    url_base: "partial/post-details.html",
-    user: "postId",
+    url_base: "partial/user-details.html",
+    user: "userId",
 
     getUrlUserId(id){
         return `${this.url_base}?${this.user}=${id}`
