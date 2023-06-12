@@ -1,6 +1,6 @@
-import { addListener, getElement } from "../_utils/index.js";
-import { URLParams } from "../_utils/url-params.js";
-import { requestServer } from "../_utils/request-server.js";
+import { addListener, getElement } from "../utils/index.js";
+import { URLParams } from "../utils/url-params.js";
+import { requestServer } from "../utils/request-server.js";
 import { render as renderUser } from "../renders/user-render.js";
 import { render as renderPosts } from "../renders/posts-render.js";
 

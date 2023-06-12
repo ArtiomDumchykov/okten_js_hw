@@ -31,8 +31,8 @@ post-details.html - блок з інфою про пост зверху. Ком�
 */
 
 
-import { addListener } from "./_utils/index.js";
-import { requestServer } from "./_utils/request-server.js";
+import { addListener } from "./utils/index.js";
+import { requestServer } from "./utils/request-server.js";
 
 
 import { render as renderUsers } from "./renders/users-render.js";

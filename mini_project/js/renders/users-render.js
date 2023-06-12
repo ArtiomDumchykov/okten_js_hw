@@ -1,4 +1,4 @@
-import { getElement, insertContentToElement } from "../_utils/index.js"
+import { getElement, insertContentToElement } from "../utils/index.js"
 
 
 const ul = getElement(".users-list")

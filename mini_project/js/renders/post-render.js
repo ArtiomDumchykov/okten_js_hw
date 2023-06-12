@@ -1,5 +1,5 @@
 
-import { getElement, insertContentToElement } from "../_utils/index.js"
+import { getElement, insertContentToElement } from "../utils/index.js"
 
 const post_content = getElement(".post__content") 
 
