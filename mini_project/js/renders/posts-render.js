@@ -25,8 +25,8 @@ export function render(data) {
 
         return `
             <li class="posts__item">
-                <a href="${utils_url.getPostId(id)}">
-                    <h3 class="posts__title">${title}</h3>
+                <a href="${utils_url.getPostId(id)}" class="posts-item__link">
+                    <span class="posts__title">${title}</span>
                 </a>
             
             </li>

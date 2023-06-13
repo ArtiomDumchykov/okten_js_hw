@@ -98,6 +98,10 @@ body {
 .users-item {
   padding: 5px 7px;
   font-size: 16px;
+  max-width: 265px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .users-item .users-item__link {
   color: #111321;
