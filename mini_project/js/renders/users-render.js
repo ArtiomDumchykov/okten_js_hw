@@ -18,7 +18,7 @@ export function render(data) {
         return `
             <li class="users-item">
                 <a href="${utils_url.getUrlUserId(id)}" class="users-item__link">
-                    <p>ID: ${id}, Name: ${name}</p>
+                    <span>ID: ${id}, Name: ${name}</span>
                 </a>
             
             </li>
