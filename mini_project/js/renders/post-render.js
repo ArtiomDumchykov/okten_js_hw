@@ -14,13 +14,7 @@ export function render(data) {
             </div>
             <p class="post__text">${text}</p>
         </div>
-        <div class="post__comments">
-            <h2 class"post-comments__title">Comments</h2>
-            <div class="post-comments-wrap">
-                <ul class="comments__list">
-                </ul>
-            </div>
-        </div>
+        
     `;
 
     insertContentToElement(post_content, html)
