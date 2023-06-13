@@ -9,10 +9,10 @@ export function render(data) {
     const html = `
         <div class="post-text">
             <div class="post-title-wrap">
-                <h2 class="post__title">Tiltle: ${title}</h2>
+                <h2 class="post-title">Tiltle: ${title}</h2>
                 <p class="post__text">${text}</p>
             </div>
-            <p class=""></p>UserId: ${userId}, PostId: ${postId}</p>
+            <p class="post__user">UserId: ${userId}, PostId: ${postId}</p>
         </div>
         
     `;

@@ -1,6 +1,7 @@
 @import './utils/vars';
 @import './utils/reset';
 @import './utils/container';
+@import './utils/scroll';
 
 
 .post {
@@ -10,28 +11,59 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 25px
 }
 
-.post-title {
-
+.post__title {
+    font-size: 24px;
+    font-weight: 700;
 }
 
 .post-content-wrap {
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 .post__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 
 .post-text { 
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 5px;
+    max-width: 65%;
+    
+}
+.post__user {
+    align-self: flex-end;
 }
 
+.post-title-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.post-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+.post__text {
+    text-indent: 3%;
+    font-size: 16px;
+}
 
-
+.post__comments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .post-comments__btn-wrap {
     align-self: center;
@@ -58,3 +90,11 @@
 
     }
 }
+
+.post-comments-wrap {
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+}
+
+@import "./post_comments"

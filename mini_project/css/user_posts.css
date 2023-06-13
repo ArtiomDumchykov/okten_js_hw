@@ -2,9 +2,11 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
+  flex-wrap: wrap;
 }
 
 .posts__item {
+  flex: 1 1 24%;
   padding: 5px 7px;
 }
 .posts__item .posts-item__link {
