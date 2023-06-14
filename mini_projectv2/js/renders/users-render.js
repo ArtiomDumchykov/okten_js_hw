@@ -1,7 +1,7 @@
 const ul = getElement(".users-list")
 
 const utils_url = {
-    url_base: "partial/user-details.html",
+    url_base: "user-details.html",
     user: "userId",
 
     getUrlUserId(id){
