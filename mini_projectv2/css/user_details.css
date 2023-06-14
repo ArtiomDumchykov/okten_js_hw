@@ -291,4 +291,15 @@ body {
   justify-content: center;
   align-items: center;
   gap: 5px;
+}
+
+.hidden-lock {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  align-self: center;
+}
+
+.empty-data {
+  align-self: center;
 }/*# sourceMappingURL=user_details.css.map */

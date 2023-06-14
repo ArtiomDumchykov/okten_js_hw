@@ -7,7 +7,13 @@ async function start() {
         isCheckEmptyData(data) && renderUsers(data)
 
     } catch (err) {
-        console.log(err);
+        // console.log(err);
+        const emptyDataElement = getElement(".empty-data")
+
+        emptyDataError(err.message, emptyDataElement)
+        
+
+
     }
     finally {
         dotPreLoader()

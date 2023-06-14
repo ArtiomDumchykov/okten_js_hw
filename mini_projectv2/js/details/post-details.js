@@ -15,7 +15,12 @@ async function start() {
 
         
     } catch (err) {
-        console.log(err)
+        // console.log(err)
+        const emptyDataElement = getElement(".empty-data")
+        emptyDataError(err.message, emptyDataElement)
+        
+        hiddenElements(getElement(".post-content-wrap") )
+        
     }
     finally {
         dotPreLoader()
@@ -28,9 +33,11 @@ async function comments() {
         // const ulComments = getElement(".comments__list")
         const post_id = url_params.getParam("postId");
         const data = await requestServer.getCommentsPost(post_id)
-        renderPostComments(data)
-    } catch (error) {
-        
+        isCheckEmptyData(data) && renderPostComments(data)
+    } catch (err) {
+        const emptyDataElement = getElement(".empty-comments-data")
+
+        emptyDataError(err.message, emptyDataElement)
     }
 
 }

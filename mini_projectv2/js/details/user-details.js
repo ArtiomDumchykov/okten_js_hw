@@ -15,7 +15,13 @@ async function start() {
         addListener(btn, "click", posts);
 
     } catch (err) {
-        console.log(err);
+        
+        const emptyDataElement = getElement(".empty-data")
+
+        emptyDataError(err.message, emptyDataElement)
+
+        hiddenElements(getElement(".user__content"), getElement(".user__posts"))
+        
     }
     finally {
         dotPreLoader()
@@ -29,10 +35,14 @@ async function posts(e) {
         const target = e.target;
         const userIdPosts = target.dataset.userId;
         const data = await requestServer.getPosts(userIdPosts);
-        renderPosts(data);
+        isCheckEmptyData(data) && renderPosts(data)
         
     } catch (err) {
         console.log(err);
+
+        const emptyDataElement = getElement(".empty-posts-data")
+
+        emptyDataError(err.message, emptyDataElement)
     }
    
 
