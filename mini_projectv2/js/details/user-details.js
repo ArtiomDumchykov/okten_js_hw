@@ -32,6 +32,7 @@ async function start() {
 
 async function posts(e) {
     try {
+        const ulPosts = getElement(".user-posts__list")
         const loadDots = getElement(".data-load")
         addClass(loadDots, "load")
 
@@ -41,7 +42,7 @@ async function posts(e) {
 
         isCheckEmptyData(data) && renderPosts(data)
 
-        dotsLoadData(loadDots, getElement(".user-posts__list"))
+        dotsLoadData(loadDots, ulPosts)
         
     } catch (err) {
         console.log(err);

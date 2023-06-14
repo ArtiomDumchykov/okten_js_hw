@@ -30,6 +30,7 @@ async function start() {
 
 async function comments() {
     try {
+        const ulComments = getElement(".comments__list")
         const loadDots = getElement(".data-load")
         addClass(loadDots, "load")
         
@@ -39,7 +40,7 @@ async function comments() {
 
         isCheckEmptyData(data) && renderPostComments(data)
 
-        dotsLoadData(loadDots, getElement(".comments__list"))
+        dotsLoadData(loadDots, ulComments)
 
     } catch (err) {
         const emptyDataElement = getElement(".empty-comments-data")
