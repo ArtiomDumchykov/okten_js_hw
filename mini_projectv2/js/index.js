@@ -3,7 +3,9 @@ addListener(document, "DOMContentLoaded", start())
 async function start() {
     try {
         const data = await requestServer.getUsers()
-        renderUsers(data)
+
+        isCheckEmptyData(data) && renderUsers(data)
+
     } catch (err) {
         console.log(err);
     }

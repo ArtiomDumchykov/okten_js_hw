@@ -20,9 +20,24 @@ function removeClass(element, className){
     element.classList.remove(className)
 }
 
-function dotPreLoader(time = 1500) {
+function dotPreLoader(time = 1200) {
     setTimeout(() => {
         const wrap = getElement(".wrapper");
         removeClass(wrap, "lock")
-    }, 1500)
+    }, time)
+}
+
+
+
+function isCheckEmptyData(data) {
+    if (Object.values(data).length) {
+        return true
+    }
+
+    throw new Error("empty data")
+
+}
+
+function typeOfFunction(val) {
+    return Object.prototype.toString.call(val).slice(8,-1).toLowerCase();
 }

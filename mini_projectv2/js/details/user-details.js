@@ -7,7 +7,8 @@ async function start() {
     try {
         const user_id = url_params.getParam("userId");
         const data = await requestServer.getUser(user_id);
-        renderUser(data);
+        
+        isCheckEmptyData(data) && renderUser(data)
 
         const btn = getElement(".posts__btn");
         btn.dataset.userId = user_id;
