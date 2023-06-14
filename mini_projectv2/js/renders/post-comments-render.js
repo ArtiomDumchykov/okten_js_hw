@@ -3,7 +3,6 @@ const ulComments = getElement(".comments__list")
  function renderPostComments(data) {
   
 
-
     const html = [...data].map(item => {
         const {id,  email: userEmail, name: title, body: text} = item
         return `
@@ -15,11 +14,6 @@ const ulComments = getElement(".comments__list")
         `
     }).join(" ")
 
-    /*
-    
-        отрисовать post-comments 
-        добавить стили
-    */
 
     insertContentToElement(ulComments, html)
 }

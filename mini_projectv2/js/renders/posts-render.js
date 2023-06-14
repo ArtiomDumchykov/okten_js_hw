@@ -12,10 +12,6 @@ const utils_url = {
 }
 
  function renderPosts(data) {
-  
-
-    // const {userId, id, title, body} = data
-
     const html = [...data].map(item => {
         const {userId, id, title, body} = item
 

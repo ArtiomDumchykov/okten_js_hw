@@ -1,6 +1,4 @@
-
 const url_params = new URLParams(location.href)
-
 
 
 addListener(document, "DOMContentLoaded", start())
