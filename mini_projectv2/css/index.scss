@@ -33,36 +33,39 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
-    color: $main-color;
-    max-width: 600px;
+
     position: relative;
+    max-width: 600px;
+    
+    color: $main-color;
     
 }
 
 .users-item {
     flex: 1 1 50%;
 
+    max-width: 265px;
+
     padding: 5px 7px;
     font-size: 16px;
 
-    max-width: 265px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 
     border: 1px solid black;
+
     transition: $transition;
 
     & .users-item__link {
 
         color: $main-color;
-
         transition: $transition;
+        
         &:hover,
         &:focus {
             cursor: pointer;
             color: $orange-color;
-            
             transition: $transition;
         }
         

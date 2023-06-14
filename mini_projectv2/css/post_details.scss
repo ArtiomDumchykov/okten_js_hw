@@ -31,34 +31,34 @@
     flex-direction: column;
     align-items: center;
 
+    & .post-text { 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        max-width: 65%;
+        
+    }
+    & .post__user {
+        align-self: flex-end;
+    }
 }
 
-.post-text { 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    max-width: 65%;
-    
-}
-.post__user {
-    align-self: flex-end;
-}
 
 .post-title-wrap {
     display: flex;
     flex-direction: column;
     gap: 10px;
     
-}
-.post-title {
-    align-self: center;
-    font-size: 18px;
-    font-weight: 600;
-}
-.post__text {
-    text-indent: 3%;
-    font-size: 16px;
+    & .post-title {
+        align-self: center;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    & .post__text {
+        text-indent: 3%;
+        font-size: 16px;
+    }
 }
 
 .post__comments {
@@ -75,12 +75,12 @@
   
 
     & .comments__btn {
+        width: 100%;
+        height: 100%;
 
         font-weight: 600;
         text-transform: uppercase;
 
-        width: 100%;
-        height: 100%;
         border: 1px solid $main-color;
 
         transition: $transition;

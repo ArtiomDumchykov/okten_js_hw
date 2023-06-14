@@ -68,3 +68,12 @@ body {
     transition: $transition;
 
 }
+
+.wrapper.lock {
+    position: fixed;
+    z-index: -1;
+    // display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition;
+}
