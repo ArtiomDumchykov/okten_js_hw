@@ -30,10 +30,17 @@ async function start() {
 
 async function comments() {
     try {
-        // const ulComments = getElement(".comments__list")
+        const loadDots = getElement(".data-load")
+        addClass(loadDots, "load")
+        
+   
         const post_id = url_params.getParam("postId");
         const data = await requestServer.getCommentsPost(post_id)
+
         isCheckEmptyData(data) && renderPostComments(data)
+
+        dotsLoadData(loadDots, getElement(".comments__list"))
+
     } catch (err) {
         const emptyDataElement = getElement(".empty-comments-data")
 

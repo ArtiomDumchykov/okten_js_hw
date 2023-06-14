@@ -32,10 +32,16 @@ async function start() {
 
 async function posts(e) {
     try {
+        const loadDots = getElement(".data-load")
+        addClass(loadDots, "load")
+
         const target = e.target;
         const userIdPosts = target.dataset.userId;
         const data = await requestServer.getPosts(userIdPosts);
+
         isCheckEmptyData(data) && renderPosts(data)
+
+        dotsLoadData(loadDots, getElement(".user-posts__list"))
         
     } catch (err) {
         console.log(err);

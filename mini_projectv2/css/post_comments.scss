@@ -2,6 +2,19 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition;
+
+    &.loading {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+        transition: $transition;
+    }
+
 
     & .comments__item { 
         flex: 1 1 24%;

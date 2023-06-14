@@ -8,6 +8,17 @@
     gap: 10px 7px;
     flex-wrap: wrap;
     position: relative;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition;
+
+    &.loading {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+        transition: $transition;
+    }
 }
 
 .posts__item {
