@@ -58,6 +58,8 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   opacity: 1;
   visibility: visible;
   transition: all 300ms ease;
@@ -298,4 +300,19 @@ body {
 
 .empty-data {
   align-self: center;
+}
+
+.footer {
+  width: 100%;
+  padding: 10px 15px;
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.footer__body {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__copy-right {
+  font-size: 16px;
 }/*# sourceMappingURL=user_details.css.map */
