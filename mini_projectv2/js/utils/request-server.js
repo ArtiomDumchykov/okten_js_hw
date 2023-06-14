@@ -33,4 +33,5 @@ class RequestServer {
     }
 };
 
-export const requestServer = new RequestServer();
+
+const requestServer = new RequestServer();
