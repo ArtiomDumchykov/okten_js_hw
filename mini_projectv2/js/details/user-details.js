@@ -16,6 +16,9 @@ async function start() {
     } catch (err) {
         console.log(err);
     }
+    finally {
+        dotPreLoader()
+    }
 
 }
 
@@ -30,6 +33,7 @@ async function posts(e) {
     } catch (err) {
         console.log(err);
     }
+   
 
 
 

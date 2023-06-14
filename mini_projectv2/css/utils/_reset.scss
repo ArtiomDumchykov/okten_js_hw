@@ -54,6 +54,7 @@ body {
     background-color: $light-theme-color;
 
     height: 100%;
+    transition: $transition;
 }
 
 .wrapper {
@@ -62,6 +63,8 @@ body {
     display: flex;
     flex-direction: column;
    
-
+    opacity: 1;
+    visibility: visible;
+    transition: $transition;
 
 }

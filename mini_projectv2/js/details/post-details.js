@@ -16,6 +16,9 @@ async function start() {
     } catch (err) {
         console.log(err)
     }
+    finally {
+        dotPreLoader()
+    }
 }
 
 
@@ -28,4 +31,5 @@ async function comments() {
     } catch (error) {
         
     }
+
 }

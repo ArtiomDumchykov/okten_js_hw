@@ -16,3 +16,13 @@ function getElement(selector) {
 }
 
 
+function removeClass(element, className){
+    element.classList.remove(className)
+}
+
+function dotPreLoader(time = 1500) {
+    setTimeout(() => {
+        const wrap = getElement(".wrapper");
+        removeClass(wrap, "lock")
+    }, 1500)
+}
