@@ -35,18 +35,7 @@ function hiddenElements(...arr) {
     [...arr].map(item => addClass(item, "hidden-lock"))
 }
 
-function emptyDataError(message, element) {
-    console.log(message)
-    console.log(element)
-    switch (message) {
-        case "empty data": 
-            insertContentToElement(element, message)
-            break;
-        default:
-            console.log(message) 
-            return message
-    }
-}
+
 
 function isCheckEmptyData(data) {
     if (Object.values(data).length) {
