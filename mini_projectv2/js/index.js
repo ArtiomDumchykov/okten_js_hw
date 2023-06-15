@@ -2,8 +2,8 @@
 
 
 
-checkThemeLocal()
 currentTheme()
+checkThemeLocal()
 
 addListener(document, "DOMContentLoaded", start())
 

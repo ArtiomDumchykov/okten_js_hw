@@ -1,3 +1,7 @@
+currentTheme()
+checkThemeLocal()
+
+
 const url_params = new URLParams(location.href)
 
 

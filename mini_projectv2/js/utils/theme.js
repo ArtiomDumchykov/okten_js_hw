@@ -11,8 +11,7 @@ const utils_theme = {
 function currentTheme() {
     const {theme, light, dark} = utils_theme
     const curTheme = isCheckLocalStorage(theme) == null ? null :getLocalStorage(theme)
-    const body = getElement("body")
-    
+
     return curTheme
  
     
@@ -26,6 +25,15 @@ function checkThemeLocal() {
         utils.theme = light
         return
     }
+
+    const body = getElement("body")
+    const themeLocalStorage =  getLocalStorage(theme);
+
+
+    themeLocalStorage == light && removeClass(body, dark)
+
+    themeLocalStorage == dark && addClass(body, dark)
+
 }
 
 
@@ -33,27 +41,12 @@ function changeTheme() {
     const {theme, light, dark} = utils_theme
 
     const body = getElement("body")
-   toggleElement(body, "dark")
+    toggleElement(body, "dark")
 
-   
    const curTheme = currentTheme()
 
-   switch(curTheme) {
-       case light:
+   curTheme == light && setLocaStorage(theme, dark)
 
-           setLocaStorage(theme, dark)
-           break;
-       case dark:
-
-           setLocaStorage(theme, light)
-           break;
-       default:
-           setLocaStorage(theme, light)
-           break;
-   }
-
+   curTheme == dark && setLocaStorage(theme, light)
 }
 
-function toggleElement(element, selector) {
-    element.classList.toggle(selector)
-} 
