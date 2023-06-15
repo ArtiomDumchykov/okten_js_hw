@@ -13,8 +13,8 @@ const utils_url = {
 
     const html = [...data].map(({id, name, ...rest}) => {
         return `
-            <li class="users-item">
-                <a href="${utils_url.getUrlUserId(id)}" class="users-item__link">
+            <li class="users-item _is-dark">
+                <a href="${utils_url.getUrlUserId(id)}" class="users-item__link _is-dark">
                     <span>ID: ${id}, Name: ${name}</span>
                 </a>
             

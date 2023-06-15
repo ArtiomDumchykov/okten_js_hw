@@ -1,7 +1,8 @@
 const utils = {
-    
-}
+    theme: null,
+   
 
+}
 
  function addListener(element, eventName, fn) {
     element.addEventListener(eventName, fn)

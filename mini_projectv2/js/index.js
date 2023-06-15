@@ -1,3 +1,10 @@
+
+
+
+
+checkThemeLocal()
+currentTheme()
+
 addListener(document, "DOMContentLoaded", start())
 
 async function start() {

@@ -1,3 +1,17 @@
+body.dark .posts__item {
+  border-color: #f4f4f4;
+}
+body.dark .posts__item:hover {
+  border-color: #ffa500;
+}
+body.dark .posts__item .posts-item__link {
+  color: #f4f4f4;
+}
+body.dark .posts__item .posts-item__link:hover, body.dark .posts__item .posts-item__link:focus {
+  color: #ffa500;
+  transition: #ffa500;
+}
+
 .user-posts__list {
   display: flex;
   justify-content: center;

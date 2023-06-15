@@ -55,6 +55,13 @@ body {
 
     height: 100%;
     transition: $transition;
+
+
+
+    &.dark {
+        color: $light-color;
+        background-color: $dark-theme-color;
+    }
 }
 
 .wrapper {

@@ -4,6 +4,27 @@
 @import './utils/scroll';
 
 
+body.dark {
+    .users-list {
+        & .users-item {
+            border-color:  $light-color;
+            & .users-item__link {
+                color: $light-color;
+                &:hover,
+                &:focus {
+                    color: $orange-color;
+                }
+            }
+
+             &:hover {
+                border-color: $orange-color;
+            }
+        }
+    
+    }
+}
+
+
 .users {
     padding: 20px 0;
 }
@@ -38,8 +59,11 @@
     max-width: 600px;
     
     color: $main-color;
+
+   
     
 }
+
 
 .users-item {
     flex: 1 1 50%;
@@ -54,6 +78,10 @@
     text-overflow: ellipsis;
 
     border: 1px solid black;
+    
+    // &.dark {
+    //     border-color:  $light-color;
+    // }
 
     transition: $transition;
 
@@ -61,6 +89,10 @@
 
         color: $main-color;
         transition: $transition;
+
+        // &.dark {
+        //     color: $light-color;
+        // }
         
         &:hover,
         &:focus {

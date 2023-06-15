@@ -1,5 +1,27 @@
 @import './utils/vars';
 
+
+body.dark {
+    .posts__item {
+    
+        border-color: $light-color;
+        &:hover {
+            border-color: $orange-color;
+        }
+
+        & .posts-item__link {
+            color: $light-color;
+           
+
+            &:hover,
+            &:focus {
+                color: $orange-color;
+                transition: $orange-color;
+            }
+        }
+    }
+}
+
 .user-posts__list {
     display: flex;
     // flex-direction: column;
@@ -37,6 +59,7 @@
 
     border: 1px solid black;
     // overflow: hidden;
+ 
 
     transition: $transition;
 
@@ -81,6 +104,7 @@
         font-weight: 600;
 
         color: $main-color;
+     
 
         transition: $transition;
 

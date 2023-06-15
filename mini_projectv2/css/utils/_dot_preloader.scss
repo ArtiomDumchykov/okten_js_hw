@@ -1,3 +1,12 @@
+body.dark {
+    .loading-dots {
+        &--dot {
+            background-color: $orange-color;
+        }
+    }
+}
+
+
 .loading-dots {
     position: fixed;
     width: 100%;
@@ -37,6 +46,8 @@
 
         border-radius: 10px;
         background-color: #000;
+        
+        
 
         animation: dot-keyframes 1.5s infinite ease-in-out;
         transform: translateY(0px);
