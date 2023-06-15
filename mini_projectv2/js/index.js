@@ -3,6 +3,12 @@ currentTheme()
 checkThemeLocal()
 
 
+const btnTHEME = getElement('.btn__change-theme')
+
+addListener(btnTHEME, "click", function() {
+    changeTheme()
+})
+
 addListener(document, "DOMContentLoaded", start())
 
 // Start code

@@ -3,6 +3,11 @@
 currentTheme()
 checkThemeLocal()
 
+const btnTHEME = getElement('.btn__change-theme')
+
+addListener(btnTHEME, "click", function() {
+    changeTheme()
+})
 
 const url_params = new URLParams(location.href)
 

@@ -2,6 +2,7 @@
 @import './utils/reset';
 @import './utils/container';
 @import './utils/scroll';
+@import "./utils/theme";
 
 
 body.dark {
@@ -28,6 +29,7 @@ body.dark {
 .users {
     padding: 20px 0;
 }
+
 .users__container {
     display: flex;
     flex-direction: column;
@@ -60,8 +62,6 @@ body.dark {
     
     color: $main-color;
 
-   
-    
 }
 
 
@@ -79,21 +79,13 @@ body.dark {
 
     border: 1px solid black;
     
-    // &.dark {
-    //     border-color:  $light-color;
-    // }
-
     transition: $transition;
 
     & .users-item__link {
-
+       
         color: $main-color;
         transition: $transition;
 
-        // &.dark {
-        //     color: $light-color;
-        // }
-        
         &:hover,
         &:focus {
             cursor: pointer;
