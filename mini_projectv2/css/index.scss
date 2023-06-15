@@ -7,8 +7,10 @@
 
 body.dark {
     .users-list {
+
         & .users-item {
             border-color:  $light-color;
+            
             & .users-item__link {
                 color: $light-color;
                 &:hover,
