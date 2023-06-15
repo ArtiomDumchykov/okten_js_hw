@@ -1,20 +1,21 @@
-
-
-
-
+// THEME
 currentTheme()
 checkThemeLocal()
 
+
 addListener(document, "DOMContentLoaded", start())
 
+// Start code
+// USERS
 async function start() {
+
     try {
         const data = await requestServer.getUsers()
 
         isCheckEmptyData(data) && renderUsers(data)
 
     } catch (err) {
-        // console.log(err);
+        console.log(err);
         const emptyDataElement = getElement(".empty-data")
 
         emptyDataError(err.message, emptyDataElement)

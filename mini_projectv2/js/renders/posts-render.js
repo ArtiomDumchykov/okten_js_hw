@@ -1,6 +1,8 @@
+/*
+    Render постов пользователя
+*/
+
 const ulPosts = getElement(".user-posts__list")
-
-
 
 const utils_url = {
     url_base: "post-details.html",

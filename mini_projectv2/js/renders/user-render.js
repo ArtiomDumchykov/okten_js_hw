@@ -1,3 +1,8 @@
+/*
+    Render инофрмации пользователя
+
+*/
+
 const user_content = getElement(".user__content");
 
  function renderUser(data) {

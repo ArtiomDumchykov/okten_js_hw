@@ -1,3 +1,4 @@
+//Class для отправки запросов на FakeApi
 class RequestServer {
     static url = "https://jsonplaceholder.typicode.com";
 

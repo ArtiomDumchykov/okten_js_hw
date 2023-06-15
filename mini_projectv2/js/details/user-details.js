@@ -1,12 +1,14 @@
+
+// THEME
 currentTheme()
 checkThemeLocal()
 
-
 const url_params = new URLParams(location.href)
-
 
 addListener(document, "DOMContentLoaded", start())
 
+// Start code
+// USER-DETAILS
 async function start() {
     try {
         const user_id = url_params.getParam("userId");
@@ -19,7 +21,7 @@ async function start() {
         addListener(btn, "click", posts);
 
     } catch (err) {
-        
+        console.log(err);
         const emptyDataElement = getElement(".empty-data")
 
         emptyDataError(err.message, emptyDataElement)
@@ -34,10 +36,11 @@ async function start() {
 }
 
 
+// User POSTS
 async function posts(e) {
+    const ulPosts = getElement(".user-posts__list")
+    const loadDots = getElement(".data-load")
     try {
-        const ulPosts = getElement(".user-posts__list")
-        const loadDots = getElement(".data-load")
         addClass(loadDots, "load")
 
         const target = e.target;
@@ -54,7 +57,10 @@ async function posts(e) {
         const emptyDataElement = getElement(".empty-posts-data")
 
         emptyDataError(err.message, emptyDataElement)
+        dotsLoadData(loadDots, ulPosts)
+       
     }
+    
    
 
 

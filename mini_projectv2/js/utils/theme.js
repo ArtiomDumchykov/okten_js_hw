@@ -7,7 +7,7 @@ const utils_theme = {
 
 
 
-
+// Проверка текущей темы
 function currentTheme() {
     const {theme, light, dark} = utils_theme
     const curTheme = isCheckLocalStorage(theme) == null ? null :getLocalStorage(theme)
@@ -17,7 +17,7 @@ function currentTheme() {
     
 }  
 
-
+// Проверка theme в localStorage
 function checkThemeLocal() {
     const {theme, light, dark} = utils_theme
 
@@ -36,7 +36,7 @@ function checkThemeLocal() {
 
 }
 
-
+// Смена текущей theme с изменением текущей theme в localStorage
 function changeTheme() {
     const {theme, light, dark} = utils_theme
 

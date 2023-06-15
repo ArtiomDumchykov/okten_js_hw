@@ -1,3 +1,5 @@
+
+// THEME
 currentTheme()
 checkThemeLocal()
 
@@ -7,6 +9,8 @@ const url_params = new URLParams(location.href)
 
 addListener(document, "DOMContentLoaded", start())
 
+// Start code
+// POST_DETAILS
 async function start() {
     try {
         const post_id = url_params.getParam("postId");
@@ -19,7 +23,7 @@ async function start() {
 
         
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         const emptyDataElement = getElement(".empty-data")
         emptyDataError(err.message, emptyDataElement)
         
@@ -32,10 +36,11 @@ async function start() {
 }
 
 
+// Post COMMENTS
 async function comments() {
+    const ulComments = getElement(".comments__list")
+    const loadDots = getElement(".data-load")
     try {
-        const ulComments = getElement(".comments__list")
-        const loadDots = getElement(".data-load")
         addClass(loadDots, "load")
         
    
@@ -47,9 +52,12 @@ async function comments() {
         dotsLoadData(loadDots, ulComments)
 
     } catch (err) {
+        console.log(err);
         const emptyDataElement = getElement(".empty-comments-data")
 
         emptyDataError(err.message, emptyDataElement)
+        dotsLoadData(loadDots, ulComments)
     }
+    
 
 }

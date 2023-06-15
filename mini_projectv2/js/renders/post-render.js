@@ -1,3 +1,7 @@
+/*
+    Render информации поста
+*/
+
 const post_content = getElement(".post__content") 
 
 function renderPost(data) {

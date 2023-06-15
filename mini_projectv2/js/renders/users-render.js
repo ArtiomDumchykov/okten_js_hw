@@ -1,3 +1,7 @@
+/*
+    Render пользвоателей
+*/
+
 const ul = getElement(".users-list")
 
 const utils_url = {

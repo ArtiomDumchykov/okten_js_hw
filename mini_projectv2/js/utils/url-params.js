@@ -1,3 +1,4 @@
+// Поулчение url params по ключу key
 class URLParams {
     constructor(location) {
         this.location = new URL(location)
