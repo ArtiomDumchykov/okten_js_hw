@@ -1,0 +1,13 @@
+.not-found {
+    // flex-grow: 1;
+    display: none;
+}
+
+.not-found__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    font-weight: 700;
+}

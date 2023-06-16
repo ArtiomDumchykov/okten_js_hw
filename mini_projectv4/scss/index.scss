@@ -1,0 +1,159 @@
+@import './utils/vars';
+@import './utils/reset';
+@import './utils/container';
+@import './utils/theme';
+@import './utils/dot_preloader';
+@import './header';
+@import './main';
+@import './footer';
+@import "./utils/not_found";
+
+
+
+
+.users {
+    padding: 25px 0;
+
+}
+
+.users__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+.section__header {
+
+}
+
+.section__title {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.section__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+//==============================
+
+
+
+
+
+body.dark {
+    .users-list {
+
+        & .users-item {
+            border-color:  $light-color;
+            
+            & .users-item__link {
+                color: $light-color;
+                &:hover,
+                &:focus {
+                    color: $orange-color;
+                }
+            }
+
+             &:hover {
+                border-color: $orange-color;
+            }
+        }
+    
+    }
+}
+
+
+.users {
+    padding: 20px 0;
+}
+
+.users__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.users__title {
+    font-size: 24px;
+    font-weight: 700;
+    align-self: center;
+}
+
+.users__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+}
+
+.users-list {
+    display: flex;
+    // flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    position: relative;
+    max-width: 600px;
+    
+    color: $main-color;
+
+}
+
+
+.users-item {
+    flex: 1 1 50%;
+
+    max-width: 265px;
+
+    padding: 5px 7px;
+    font-size: 16px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    border: 1px solid black;
+    
+    transition: $transition;
+
+    & .users-item__link {
+       
+        color: $main-color;
+        transition: $transition;
+
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            color: $orange-color;
+            transition: $transition;
+        }
+        
+    }
+
+
+    &:hover {
+        transition: $transition;
+        border-color: $orange-color;
+        transform: translateY(-5px);
+    }
+}
+
+
+
+
+
+
+// .empty-data {
+//     display: none;
+//     opacity: 0;
+//     visibility: hidden;
+// }

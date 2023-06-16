@@ -1,0 +1,103 @@
+@import './utils/vars';
+
+
+body.dark {
+    .header {
+        box-shadow: 0 3px 10px rgba(255, 255, 255, 0.2);
+    }
+
+    .item-nav__link {
+        color: $light-color;
+
+        &:hover {
+            // color: #fce38a;
+            color: $orange-color;
+            transition: $transition;
+        }
+    }
+
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    padding: 15px 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header__body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.nav {
+    // margin: 0 auto;
+}
+
+.header-nav__list {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+.list-nav {
+
+}
+
+.header-nav__item {
+
+}
+
+.item-nav__link {
+    font-size: 18px;
+    font-weight: 500;
+    color: $main-color;
+    display: inline-block;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 3px;
+
+        background-color: $orange-color;
+        opacity: 0;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1;
+
+        transition: opacity .1s linear;
+        // transition: $transition;
+    }
+
+    &:hover {
+        // color: #fce38a;
+        color: $orange-color;
+        transition: $transition;
+    }
+
+    &:hover::after,
+    &.active::after {
+        opacity: 1;
+        transition: $transition;
+    }
+
+    &:active {
+        color: $orange-color;
+        transition: $transition;
+    }
+}
+
+.link-nav {
+
+}

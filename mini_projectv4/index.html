@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900" rel="stylesheet" />
+    <link rel="stylesheet" href="scss/index.css">
+</head>
+<body>
+    <div class="wrapper lock">
+        <header class="header">
+            <div class="header__container _container">
+                <div class="header__body">
+                    <div class="header__logo">LOGO</div>
+                    <nav class="nav">
+                        <ul class="header-nav__list list-nav">
+                            <li class="header-nav__item">
+                                <a href="./index.html" class="item-nav__link link-nav">Home</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="theme-wrap">
+                        <button class="btn__change-theme"><span class="btn__text">Theme</span></button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main pages">
+            <section class="users">
+                <div class="users__container _container">
+                    <div class="section__header">
+                        <h1 class="section__title">Users</h1>
+                    </div>
+                    <div class="section__body">
+                        <ul class="users-list">
+                        </ul>
+                        <div class="empty-data"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <section class="not-found">
+            <div class="not-found__container _container">
+                <h2 class="error-not-found__title"></h2>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer__container _container">
+                <div class="footer__body">
+                    <p class="footer__copy-right">© 2023 Copy right Artem Dumchykov </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="loading-dots">
+        <div class="loading-dots--dot "></div>
+        <div class="loading-dots--dot "></div>
+        <div class="loading-dots--dot "></div>
+    </div>
+
+    <script src="js/utils/delay.js"></script>
+    <script src="js/utils/not_found.js"></script>
+    <script src="js/utils/errorHapler.js"></script>
+
+    <script src="js/utils/changeClassElemet.js"></script>
+    <script src="js/utils/dom.js"></script>
+    <script src="js/utils/dots.js"></script>
+
+    <script src="js/utils/url-params.js"></script>
+    <script src="js/utils//request-server.js"></script>
+
+    <script src="js/utils/tranformData.js"></script>
+    <script src="js/utils/localStorage.js"></script>
+
+
+
+    <script src="js/utils/_index.js"></script>
+    <script src="js/utils/theme.js"></script>
+    <script src="js/utils/typeOfData.js"></script>
+    <script src="js/utils/checkEmptyData.js"></script>
+
+    <script src="js/renders/users-render.js"></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>

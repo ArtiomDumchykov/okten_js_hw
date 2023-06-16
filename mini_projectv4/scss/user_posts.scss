@@ -1,0 +1,134 @@
+@import './utils/vars';
+
+
+body.dark {
+    .posts__item {
+    
+        border-color: $light-color;
+        &:hover {
+            border-color: $orange-color;
+        }
+
+        & .posts-item__link {
+            color: $light-color;
+           
+
+            &:hover,
+            &:focus {
+                color: $orange-color;
+                transition: $orange-color;
+            }
+        }
+    }
+}
+
+.user-posts__list {
+    display: flex;
+    // flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 7px;
+    flex-wrap: wrap;
+    position: relative;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition;
+
+    &.loading {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+        transition: $transition;
+    }
+}
+
+.posts__item {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex: 1 1 24%;
+
+    max-width: 200px;
+    height: 100px;
+
+    padding: 5px 7px;
+
+    border: 1px solid black;
+    // overflow: hidden;
+ 
+
+    transition: $transition;
+
+    z-index: 0;
+
+    -webkit-box-shadow: 0px 4px 5px 0px rgba(184,184,184,1);
+    -moz-box-shadow: 0px 4px 5px 0px rgba(184,184,184,1);
+    box-shadow: 0px 4px 5px 0px rgba(184,184,184,1);
+
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        box-shadow: 0px 4px 5px 0px rgba(184, 184, 184, 1);
+        // border-bottom: 2px solid #ffda60;
+
+        background-color: transparent;
+
+        z-index: -1; 
+
+        transition: $transition;
+    }
+    
+    &:hover::before, 
+    &:focus::before {
+        box-shadow: 0px 4px 5px 0px rgb(145, 145, 145);
+        transform: translateY(5px);
+
+        transition: $transition;
+    }
+
+    & .posts-item__link {
+        
+        cursor: pointer;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+
+        color: $main-color;
+     
+
+        transition: $transition;
+
+        &:hover,
+        &:focus {
+            color: $orange-color;
+            transition: $transition;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        border-color: $orange-color;
+        transform: translateY(-5px);
+        transition: $transition;
+    }
+
+   
+}
+
+.posts__title {
+    // width: 100%;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    // white-space: nowrap;
+}
+
