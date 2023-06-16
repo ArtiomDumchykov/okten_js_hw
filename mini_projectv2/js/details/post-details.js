@@ -19,7 +19,11 @@ addListener(document, "DOMContentLoaded", start())
 async function start() {
     try {
         const post_id = url_params.getParam("postId");
-        const data = await requestServer.getPost(post_id);
+        const data = await requestServer
+                            .getPost(post_id)
+                            .catch(() => {
+                                throw new Error("404")
+                            })
 
         isCheckEmptyData(data) && renderPost(data)
 
@@ -30,7 +34,9 @@ async function start() {
     } catch (err) {
         console.log(err)
         const emptyDataElement = getElement(".empty-data")
-        emptyDataError(err.message, emptyDataElement)
+        
+        errorStrategies[err.message].handle(emptyDataElement)
+        // emptyDataError(err.message, emptyDataElement)
         
         hiddenElements(getElement(".post-content-wrap") )
         
@@ -59,8 +65,10 @@ async function comments() {
     } catch (err) {
         console.log(err);
         const emptyDataElement = getElement(".empty-comments-data")
-
-        emptyDataError(err.message, emptyDataElement)
+        
+        errorStrategies[err.message].handle(emptyDataElement)
+        // emptyDataError(err.message, emptyDataElement)
+        
         dotsLoadData(loadDots, ulComments)
     }
     

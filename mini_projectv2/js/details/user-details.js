@@ -18,7 +18,11 @@ addListener(document, "DOMContentLoaded", start())
 async function start() {
     try {
         const user_id = url_params.getParam("userId");
-        const data = await requestServer.getUser(user_id);
+        const data = await requestServer
+                            .getUser(user_id)
+                            .catch(() => {
+                                throw new Error("404")
+                            })
         
         isCheckEmptyData(data) && renderUser(data)
 
@@ -30,7 +34,8 @@ async function start() {
         console.log(err);
         const emptyDataElement = getElement(".empty-data")
 
-        emptyDataError(err.message, emptyDataElement)
+        errorStrategies[err.message].handle(emptyDataElement)
+        // emptyDataError(err.message, emptyDataElement)
 
         hiddenElements(getElement(".user__content"), getElement(".user__posts"))
         
@@ -61,8 +66,9 @@ async function posts(e) {
         console.log(err);
 
         const emptyDataElement = getElement(".empty-posts-data")
-
-        emptyDataError(err.message, emptyDataElement)
+        
+        errorStrategies[err.message].handle(emptyDataElement)
+        // emptyDataError(err.message, emptyDataElement)
         dotsLoadData(loadDots, ulPosts)
        
     }
