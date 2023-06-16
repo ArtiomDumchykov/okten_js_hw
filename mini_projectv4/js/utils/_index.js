@@ -1,6 +1,5 @@
 const utils = {
     theme: null,
-   
 
 }
 

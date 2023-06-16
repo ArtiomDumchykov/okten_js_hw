@@ -22,7 +22,7 @@ function checkThemeLocal() {
     const {theme, light, dark} = utils_theme
 
     if (!(isCheckLocalStorage(theme) ?? setLocaStorage(theme, light))) {
-        utils.theme = light
+        // utils.theme = light
         return
     }
 
