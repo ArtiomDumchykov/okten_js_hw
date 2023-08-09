@@ -15,7 +15,7 @@ class RequestServer {
     }
     getUsers() {
         return RequestServer.getFetchData(`${RequestServer.url}/users`)
-    }-server
+    }
     getPost(postId) {
         return RequestServer.getFetchData(`${RequestServer.url}/posts/${postId}`)
     }
